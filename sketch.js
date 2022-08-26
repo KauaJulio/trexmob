@@ -111,10 +111,10 @@ else if(gameState == END){
   groupObstacle.setVelocityXEach(0)
   groupCloud.setLifetimeEach(-1)
   groupObstacle.setLifetimeEach(-1)
-  if(mousePressedOver(restart)){
+  if(mousePressedOver(restart) || touches.length > 0){
       reset() 
-  
-  }
+      touches = []  
+ }
 }
   drawSprites();
 }
